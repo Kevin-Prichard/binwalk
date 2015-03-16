@@ -284,7 +284,7 @@ class Entropy(Module):
 
         # TODO: legend is not displayed properly when saving plots to disk
         if self.save_plot:
-            exporter = exporters.ImageExporter.ImageExporter(plt.plotItem)
+            exporter = exporters.ImageExporter(plt.plotItem)
             exporter.parameters()['width'] = self.FILE_WIDTH
             exporter.export(binwalk.core.common.unique_file_name(os.path.basename(fname), self.FILE_FORMAT))
         else:
